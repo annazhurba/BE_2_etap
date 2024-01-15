@@ -15064,7 +15064,7 @@ ALTER TABLE `ps_shop_group`
 
 --
 -- Indexes for table `
-`
+
 --
 ALTER TABLE `ps_shop_url`
   ADD PRIMARY KEY (`id_shop_url`),
