@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  BE_186249_prestashop:
+  prestashop:
     container_name: prestashop
     image: annazhurba/be_186249_prestashop:1.7
     restart: unless-stopped
