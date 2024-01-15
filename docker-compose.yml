@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  BE_186249_prestashop:
+    container_name: BE_186249_prestashop
+    image: annazhurba/be_186249_prestashop
+    restart: unless-stopped
+    ports:
+      - "18624:443"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      DISABLE_MAKE: ${DISABLE_MAKE:-0}
+      PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
+      DB_PASSWD: ${DB_PASSWD:-student}
+      DB_NAME: ${DB_NAME:-BE_186249}
+      DB_SERVER: ${DB_SERVER:-db}
+      DB_PREFIX: ${DB_PREFIX:-ps_}
+      PS_DOMAIN: ${PS_DOMAIN:-localhost:18624}
+      PS_FOLDER_INSTALL: ${PS_FOLDER_INSTALL:-install-dev}
+      PS_FOLDER_ADMIN: ${PS_FOLDER_ADMIN:-admin-dev}
+      PS_COUNTRY: ${PS_COUNTRY:-pl}
+      PS_LANGUAGE: ${PS_LANGUAGE:-pl}
+      PS_DEV_MODE: ${PS_DEV_MODE:-0}
+      ADMIN_MAIL: ${ADMIN_MAIL:-demo@prestashop.com}
+      ADMIN_PASSWD: ${ADMIN_PASSWD:-prestashop_demo}
+    networks:
+      - admin-mysql_default
+
+networks:
+    admin-mysql_default:
+      external: true
