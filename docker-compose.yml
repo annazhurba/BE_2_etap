@@ -3,7 +3,7 @@ version: '3'
 services:
   BE_186249_prestashop:
     container_name: BE_186249_prestashop
-    image: annazhurba/be_186249_prestashop
+    image: annazhurba/be_186249_prestashop:1.7
     restart: unless-stopped
     ports:
       - "18624:443"
