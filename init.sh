@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MYSQL_HOST=admin-mysql_db:3306
+MYSQL_HOST=db
 MYSQL_USER=root
 MYSQL_PASSWORD=student
 DB_NAME=BE_186249
