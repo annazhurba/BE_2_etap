@@ -2,7 +2,7 @@ version: '3'
 
 services:
   prestashop:
-    container_name: prestashop
+    #container_name: prestashop
     image: annazhurba/be_186249_prestashop:1.7
     restart: unless-stopped
     ports:
