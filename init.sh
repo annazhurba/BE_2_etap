@@ -4,7 +4,7 @@ MYSQL_HOST=db
 MYSQL_USER=root
 MYSQL_PASSWORD=student
 DB_NAME=BE_186249
-DB_CONTAINER=zl2y69k1jrbg
+DB_CONTAINER=3fba02312d95
 
 docker exec -i "$DB_CONTAINER" mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "use $DB_NAME;" 2>/dev/null 
 
