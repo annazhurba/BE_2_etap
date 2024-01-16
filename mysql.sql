@@ -19,9 +19,6 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `prestashop`
---
-CREATE DATABASE IF NOT EXISTS `prestashop` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `prestashop`;
 
 -- --------------------------------------------------------
 
