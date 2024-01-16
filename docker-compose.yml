@@ -29,12 +29,6 @@ services:
       ADMIN_PASSWD: ${ADMIN_PASSWD:-prestashop_demo}
     networks:
       - admin-mysql_default
-    command: 
-    - /bin/bash
-    - -c
-    - |
-      chmod +x /var/www/html/ssl.sh
-      /var/www/html/ssl.sh
 
 networks:
     admin-mysql_default:
