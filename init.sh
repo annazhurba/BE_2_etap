@@ -8,9 +8,12 @@ DB_CONTAINER=3fba02312d95
 
 docker exec -i "$DB_CONTAINER" mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "use $DB_NAME;" 2>/dev/null 
 
+echo 'przed ifem'
 if [ $? != 0 ]; then
+    echo 'w ifie'
     docker exec -i "$DB_CONTAINER" mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -e "CREATE DATABASE $DB_NAME;"
     docker exec -i "$DB_CONTAINER" mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -D "$DB_NAME" < "mysql.sql"
 fi
+echo 'po ifie'
 
 docker stack deploy -c docker-compose.yml BE_186249 --with-registry-auth
