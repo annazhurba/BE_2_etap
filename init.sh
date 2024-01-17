@@ -22,10 +22,6 @@ fi
 # From now, stop at error
 set -e
 
-if [ ! -f ./config/settings.inc.php ]; then
-    rm ./config.settings.inc.php
-fi
-
 if [ $PS_INSTALL_AUTO = 1 ]; then
 
     echo "\n* Installing PrestaShop, this may take a while ...";
