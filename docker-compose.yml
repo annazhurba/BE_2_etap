@@ -11,7 +11,7 @@ services:
       resources:
         limits:
           cpus: '0.25'
-          memory: 128M
+          memory: 512M
     environment:
       DISABLE_MAKE: ${DISABLE_MAKE:-0}
       PS_INSTALL_AUTO: ${PS_INSTALL_AUTO:-1}
