@@ -27,6 +27,7 @@ services:
       PS_DEV_MODE: ${PS_DEV_MODE:-0}
       ADMIN_MAIL: ${ADMIN_MAIL:-demo@prestashop.com}
       ADMIN_PASSWD: ${ADMIN_PASSWD:-prestashop_demo}
+    command: ["./init.sh"]
     networks:
       - admin-mysql_default
 
